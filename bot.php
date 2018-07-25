@@ -9,8 +9,8 @@ Modified @ Farzain - zFz
 require_once('./line_class.php');
 require_once('./unirest-php-master/src/Unirest.php');
 
-$channelAccessToken = 'rfbPZcYpCaBnBiM2pO7xeO1ZS0fQOHXDGPwoxpSwsSa0xjfJRfBtqR0Qjp6iRMStxmwdY962CX/Cxz9YZJQ1ZmBlow2tON1sB0Bqn28f9DOwyEpT6MbqZug67aNndrX1+M2sF2WHhir0CFZK+kDgfgdB04t89/1O/w1cDnyilFU='; //sesuaikan 
-$channelSecret = 'e0673d09bb9ee4e85831c1b83ce9e37e';//sesuaikan
+$channelAccessToken = 'Dm5GIOJeg8KIoeE2YIpBDi1xjbbvXwJHCZ0oZbUlhi3npNr8iTYcfM7L8kBb1kgWb36Pilrtfy3oLRWQ6fXn/Ae47lMxDtu4yjbdQz0Zj46hdu+j0nt2YCnaL2mgV+UIorHrh3Q+idSKdY+wAsrD7QdB04t89/1O/w1cDnyilFU='; //sesuaikan 
+$channelSecret = '6925428b9840fbe3f5a8df330fd0c15d';//sesuaikan
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 
@@ -43,13 +43,8 @@ function cuaca($keyword) {
     $response = Unirest\Request::get("$uri");
 
     $json = json_decode($response->raw_body, true);
-    $result = "Halo Kak ^_^ Ini ada Ramalan Cuaca Untuk Daerah ";
-	$result .= $json['name'];
-	$result .= " Dan Sekitarnya";
-	$result .= "\n\nCuaca : ";
-	$result .= $json['weather']['0']['main'];
-	$result .= "\nDeskripsi : ";
-	$result .= $json['weather']['0']['description'];
+    $result = <div id="openweathermap-widget-15"></div>
+<script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 15,cityid: '1633419',appid: '04e9619deda45ad8d60301504a5b8897',units: 'metric',containerid: 'openweathermap-widget-15',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
     return $result;
 }
 #-------------------------[Function]-------------------------#
